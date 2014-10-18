@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		168CFBC319F2B10E00B3C5F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168CFBC219F2B10E00B3C5F6 /* AppDelegate.swift */; };
+		168CFBC519F2B10E00B3C5F6 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168CFBC419F2B10E00B3C5F6 /* MasterViewController.swift */; };
+		168CFBC719F2B10E00B3C5F6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168CFBC619F2B10E00B3C5F6 /* DetailViewController.swift */; };
+		168CFBCA19F2B10E00B3C5F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 168CFBC819F2B10E00B3C5F6 /* Main.storyboard */; };
+		168CFBCC19F2B10E00B3C5F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 168CFBCB19F2B10E00B3C5F6 /* Images.xcassets */; };
+		168CFBCF19F2B10E00B3C5F6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 168CFBCD19F2B10E00B3C5F6 /* LaunchScreen.xib */; };
+		168CFBDB19F2B10E00B3C5F6 /* PlanItUp_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168CFBDA19F2B10E00B3C5F6 /* PlanItUp_iOSTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		168CFBD519F2B10E00B3C5F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 168CFBB519F2B10E00B3C5F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 168CFBBC19F2B10E00B3C5F6;
+			remoteInfo = "PlanItUp-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		168CFBBD19F2B10E00B3C5F6 /* PlanItUp-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PlanItUp-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		168CFBC119F2B10E00B3C5F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		168CFBC219F2B10E00B3C5F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		168CFBC419F2B10E00B3C5F6 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		168CFBC619F2B10E00B3C5F6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		168CFBC919F2B10E00B3C5F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		168CFBCB19F2B10E00B3C5F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		168CFBCE19F2B10E00B3C5F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		168CFBD419F2B10E00B3C5F6 /* PlanItUp-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PlanItUp-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		168CFBD919F2B10E00B3C5F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		168CFBDA19F2B10E00B3C5F6 /* PlanItUp_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanItUp_iOSTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		168CFBBA19F2B10E00B3C5F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		168CFBD119F2B10E00B3C5F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		168CFBB419F2B10E00B3C5F6 = {
+			isa = PBXGroup;
+			children = (
+				168CFBBF19F2B10E00B3C5F6 /* PlanItUp-iOS */,
+				168CFBD719F2B10E00B3C5F6 /* PlanItUp-iOSTests */,
+				168CFBBE19F2B10E00B3C5F6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		168CFBBE19F2B10E00B3C5F6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				168CFBBD19F2B10E00B3C5F6 /* PlanItUp-iOS.app */,
+				168CFBD419F2B10E00B3C5F6 /* PlanItUp-iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		168CFBBF19F2B10E00B3C5F6 /* PlanItUp-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				168CFBC219F2B10E00B3C5F6 /* AppDelegate.swift */,
+				168CFBC419F2B10E00B3C5F6 /* MasterViewController.swift */,
+				168CFBC619F2B10E00B3C5F6 /* DetailViewController.swift */,
+				168CFBC819F2B10E00B3C5F6 /* Main.storyboard */,
+				168CFBCB19F2B10E00B3C5F6 /* Images.xcassets */,
+				168CFBCD19F2B10E00B3C5F6 /* LaunchScreen.xib */,
+				168CFBC019F2B10E00B3C5F6 /* Supporting Files */,
+			);
+			path = "PlanItUp-iOS";
+			sourceTree = "<group>";
+		};
+		168CFBC019F2B10E00B3C5F6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				168CFBC119F2B10E00B3C5F6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		168CFBD719F2B10E00B3C5F6 /* PlanItUp-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				168CFBDA19F2B10E00B3C5F6 /* PlanItUp_iOSTests.swift */,
+				168CFBD819F2B10E00B3C5F6 /* Supporting Files */,
+			);
+			path = "PlanItUp-iOSTests";
+			sourceTree = "<group>";
+		};
+		168CFBD819F2B10E00B3C5F6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				168CFBD919F2B10E00B3C5F6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		168CFBBC19F2B10E00B3C5F6 /* PlanItUp-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 168CFBDE19F2B10E00B3C5F6 /* Build configuration list for PBXNativeTarget "PlanItUp-iOS" */;
+			buildPhases = (
+				168CFBB919F2B10E00B3C5F6 /* Sources */,
+				168CFBBA19F2B10E00B3C5F6 /* Frameworks */,
+				168CFBBB19F2B10E00B3C5F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PlanItUp-iOS";
+			productName = "PlanItUp-iOS";
+			productReference = 168CFBBD19F2B10E00B3C5F6 /* PlanItUp-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		168CFBD319F2B10E00B3C5F6 /* PlanItUp-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 168CFBE119F2B10E00B3C5F6 /* Build configuration list for PBXNativeTarget "PlanItUp-iOSTests" */;
+			buildPhases = (
+				168CFBD019F2B10E00B3C5F6 /* Sources */,
+				168CFBD119F2B10E00B3C5F6 /* Frameworks */,
+				168CFBD219F2B10E00B3C5F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				168CFBD619F2B10E00B3C5F6 /* PBXTargetDependency */,
+			);
+			name = "PlanItUp-iOSTests";
+			productName = "PlanItUp-iOSTests";
+			productReference = 168CFBD419F2B10E00B3C5F6 /* PlanItUp-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		168CFBB519F2B10E00B3C5F6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Mitch Herrema";
+				TargetAttributes = {
+					168CFBBC19F2B10E00B3C5F6 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					168CFBD319F2B10E00B3C5F6 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 168CFBBC19F2B10E00B3C5F6;
+					};
+				};
+			};
+			buildConfigurationList = 168CFBB819F2B10E00B3C5F6 /* Build configuration list for PBXProject "PlanItUp-iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 168CFBB419F2B10E00B3C5F6;
+			productRefGroup = 168CFBBE19F2B10E00B3C5F6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				168CFBBC19F2B10E00B3C5F6 /* PlanItUp-iOS */,
+				168CFBD319F2B10E00B3C5F6 /* PlanItUp-iOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		168CFBBB19F2B10E00B3C5F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				168CFBCA19F2B10E00B3C5F6 /* Main.storyboard in Resources */,
+				168CFBCF19F2B10E00B3C5F6 /* LaunchScreen.xib in Resources */,
+				168CFBCC19F2B10E00B3C5F6 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		168CFBD219F2B10E00B3C5F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		168CFBB919F2B10E00B3C5F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				168CFBC719F2B10E00B3C5F6 /* DetailViewController.swift in Sources */,
+				168CFBC519F2B10E00B3C5F6 /* MasterViewController.swift in Sources */,
+				168CFBC319F2B10E00B3C5F6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		168CFBD019F2B10E00B3C5F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				168CFBDB19F2B10E00B3C5F6 /* PlanItUp_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		168CFBD619F2B10E00B3C5F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 168CFBBC19F2B10E00B3C5F6 /* PlanItUp-iOS */;
+			targetProxy = 168CFBD519F2B10E00B3C5F6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		168CFBC819F2B10E00B3C5F6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				168CFBC919F2B10E00B3C5F6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		168CFBCD19F2B10E00B3C5F6 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				168CFBCE19F2B10E00B3C5F6 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		168CFBDC19F2B10E00B3C5F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		168CFBDD19F2B10E00B3C5F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		168CFBDF19F2B10E00B3C5F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "PlanItUp-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		168CFBE019F2B10E00B3C5F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "PlanItUp-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		168CFBE219F2B10E00B3C5F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PlanItUp-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlanItUp-iOS.app/PlanItUp-iOS";
+			};
+			name = Debug;
+		};
+		168CFBE319F2B10E00B3C5F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PlanItUp-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlanItUp-iOS.app/PlanItUp-iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		168CFBB819F2B10E00B3C5F6 /* Build configuration list for PBXProject "PlanItUp-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				168CFBDC19F2B10E00B3C5F6 /* Debug */,
+				168CFBDD19F2B10E00B3C5F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		168CFBDE19F2B10E00B3C5F6 /* Build configuration list for PBXNativeTarget "PlanItUp-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				168CFBDF19F2B10E00B3C5F6 /* Debug */,
+				168CFBE019F2B10E00B3C5F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		168CFBE119F2B10E00B3C5F6 /* Build configuration list for PBXNativeTarget "PlanItUp-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				168CFBE219F2B10E00B3C5F6 /* Debug */,
+				168CFBE319F2B10E00B3C5F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 168CFBB519F2B10E00B3C5F6 /* Project object */;
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8F237CB1-B7CA-4F8D-979B-B6DCF17FA5F4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PlanItUp-iOS</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>71CF4467F2591E16A1ABEBF40BA4E2D69806BCB0</key>
+		<string>https://github.com/mherrema/PlanItUp-iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PlanItUp-iOS.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>71CF4467F2591E16A1ABEBF40BA4E2D69806BCB0</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mherrema/PlanItUp-iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>71CF4467F2591E16A1ABEBF40BA4E2D69806BCB0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>71CF4467F2591E16A1ABEBF40BA4E2D69806BCB0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PlanItUp-iOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>
