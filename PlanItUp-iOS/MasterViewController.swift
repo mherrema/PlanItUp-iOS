@@ -11,15 +11,20 @@ import UIKit
 class MasterViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate {
     
     var objects = NSMutableArray()
-    var updates = [String]()
-    var projects = [String]()
-    var tasks = [String]()
+//    var updates = [String]()
+    var updates = [Update]()
+    //var projects = [String]()
+    var projects = [Project]()
+//    var tasks = [String]()
+    var tasks = [Task]()
     var sectionTitles = [String]()
     var tableData = [String]()
     var filteredResults = [String]()
-    var filteredUpdates = [String]()
-    var filteredProjects = [String]()
-    var filteredTasks = [String]()
+    var filteredUpdates = [Update]()
+    var filteredProjects = [Project]()
+    var filteredTasks = [Task]()
+    
+    var header = String()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,10 +33,16 @@ class MasterViewController: UITableViewController, UISearchBarDelegate, UISearch
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updates = ["\"Create Frontend\" task Completed", "\"Build Login Page\" task Completed"]
-        projects = ["Project 1", "Project 2", "Project 3"]
-        tasks = ["Complete Timetracker", "Hook Up With Twilio", "Create Chat"]
-        sectionTitles = ["Updates", "Projects", "Tasks"]
+        updates = [Update(updateID: 1, projectId: 1, description: "Create Frontend", date: NSDate(), userId: 1), Update(updateID: 2, projectId: 1, description: "Build Login Page", date: NSDate(), userId: 1), Update(updateID: 1, projectId: 1, description: "Build API", date: NSDate(), userId: 1)]
+        
+        projects = [Project(projectId: 1, name: "Project 1", description: "Project 1 is the first project.", due_date: NSDate()), Project(projectId: 2, name: "Project 2", description: "Project 2 is the second project.", due_date: NSDate()), Project(projectId: 3, name: "Project 3", description: "Project 3 is the third project.", due_date: NSDate())]
+        
+        tasks = [Task(taskId: 1, name: "Sync with Twilio", description: "Get API to talk to Twilio's API", projectId: 1, dueDate: NSDate(), rating: 4, userID: 1, status: "Not Completed"),Task(taskId: 2, name: "Build Chat Interface", description: "Get Chat Interface built", projectId: 1, dueDate: NSDate(), rating: 4, userID: 1, status: "Not Completed")]
+        
+//        updates = ["\"Create Frontend\" task Completed", "\"Build Login Page\" task Completed"]
+//        projects = ["Project 1", "Project 2", "Project 3"]
+//        tasks = ["Complete Timetracker", "Hook Up With Twilio", "Create Chat"]
+        sectionTitles = ["Recent Updates", "Projects", "Tasks"]
         
         // Do any additional setup after loading the view, typically from a nib.
         //        self.navigationItem.leftBarButtonItem = self.editButtonItem()
@@ -39,9 +50,8 @@ class MasterViewController: UITableViewController, UISearchBarDelegate, UISearch
         //        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
         //        self.navigationItem.rightBarButtonItem = addButton
         
-        self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), atScrollPosition: UITableViewScrollPosition.Top, animated: false)
-        
         self.tableView.reloadData()
+        self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), atScrollPosition: UITableViewScrollPosition.Top, animated: false)
     }
     
     override func didReceiveMemoryWarning() {
@@ -57,17 +67,58 @@ class MasterViewController: UITableViewController, UISearchBarDelegate, UISearch
     
     // MARK: - Segues
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        header = self.tableView(self.tableView, titleForHeaderInSection: indexPath.section)!
+        if(header == "Recent Updates"){
+            self.performSegueWithIdentifier("showUpdate", sender: tableView)
+        }
+        else if(header == "Projects"){
+            self.performSegueWithIdentifier("showProject", sender: tableView)
+        }
+        else if(header == "Tasks"){
+            self.performSegueWithIdentifier("showTask", sender: tableView)
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if segue.identifier == "showDetail" {
-            if let indexPath = self.tableView.indexPathForSelectedRow() {
-                let object = objects[indexPath.row] as NSDate
-                (segue.destinationViewController as DetailViewController).detailItem = object
+            let candyDetailViewController = segue.destinationViewController as UIViewController
+            if (sender as UITableView == self.searchDisplayController!.searchResultsTableView) {
+                NSLog("Got Here")
+                let indexPath = self.searchDisplayController!.searchResultsTableView.indexPathForSelectedRow()!
+                let destinationTitle = "search"
+                candyDetailViewController.title = destinationTitle
+            } else {
+                let indexPath = self.tableView.indexPathForSelectedRow()!
+//                let destinationTitle = self.candies[indexPath.row].name
+                candyDetailViewController.title = "Title"
             }
+        }
+        if segue.identifier == "showUpdate" {
+            let updateDetailViewController = segue.destinationViewController as UIViewController
+                        let indexPath = self.tableView.indexPathForSelectedRow()!
+            //                let destinationTitle = self.candies[indexPath.row].name
+            updateDetailViewController.title = "Update Details"
+            //            }
+        }
+        if segue.identifier == "showProject" {
+            let projectDetailViewController = segue.destinationViewController as UIViewController
+            let indexPath = self.tableView.indexPathForSelectedRow()!
+            //                let destinationTitle = self.candies[indexPath.row].name
+            projectDetailViewController.title = "Project Details"
+            //            }
+        }
+        if segue.identifier == "showUpdate" {
+            let taskDetailViewController = segue.destinationViewController as UIViewController
+            let indexPath = self.tableView.indexPathForSelectedRow()!
+            //                let destinationTitle = self.candies[indexPath.row].name
+            taskDetailViewController.title = "Task Details"
+            //            }
         }
     }
     
     // MARK: - Table View
-    
+
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         if (tableView == self.searchDisplayController!.searchResultsTableView) {
             if(filteredUpdates.count != 0 && filteredProjects.count != 0 && filteredTasks.count != 0){
@@ -171,53 +222,56 @@ class MasterViewController: UITableViewController, UISearchBarDelegate, UISearch
             //            cell.textLabel?.text = filteredResults[indexPath.row]
             if(indexPath.section == 0){
                 if(filteredUpdates.count != 0){
-                    cell.textLabel?.text = filteredUpdates[indexPath.row]
+                    cell.textLabel?.text = filteredUpdates[indexPath.row].description
                 }
                 else if(filteredUpdates.count == 0 && filteredProjects.count != 0){
-                    cell.textLabel?.text = filteredProjects[indexPath.row]
+                    cell.textLabel?.text = filteredProjects[indexPath.row].name
                 }
                 else{
-                    cell.textLabel?.text = filteredTasks[indexPath.row]
+                    cell.textLabel?.text = filteredTasks[indexPath.row].name
                 }
             }
             if(indexPath.section == 1){
                 if(filteredUpdates.count == 0 || filteredProjects.count == 0){
-                    cell.textLabel?.text = filteredTasks[indexPath.row]
+                    cell.textLabel?.text = filteredTasks[indexPath.row].name
                 }
                 else{
-                    cell.textLabel?.text = filteredProjects[indexPath.row]
+                    cell.textLabel?.text = filteredProjects[indexPath.row].name
                 }
                 
             }
             if(indexPath.section == 2){
-                cell.textLabel?.text = filteredTasks[indexPath.row]
+                cell.textLabel?.text = filteredTasks[indexPath.row].name
             }
         } else {
             if(indexPath.section == 0){
                 if(indexPath.row != updates.count){
-                    cell.textLabel?.text = updates[indexPath.row]
+                    cell.textLabel?.text = updates[indexPath.row].description
                 }
                 else{
                     cell.textLabel?.text = "See All Updates"
                     cell.textLabel?.textAlignment = NSTextAlignment.Center
+                    cell.textLabel?.font = UIFont.boldSystemFontOfSize(16)
                 }
             }
             if(indexPath.section == 1){
                 if(indexPath.row != projects.count){
-                    cell.textLabel?.text = projects[indexPath.row]
+                    cell.textLabel?.text = projects[indexPath.row].name
                 }
                 else{
                     cell.textLabel?.text = "See All Projects"
                     cell.textLabel?.textAlignment = NSTextAlignment.Center
+                    cell.textLabel?.font = UIFont.boldSystemFontOfSize(16)
                 }
             }
             if(indexPath.section == 2){
                 if(indexPath.row != tasks.count){
-                    cell.textLabel?.text = tasks[indexPath.row]
+                    cell.textLabel?.text = tasks[indexPath.row].name
                 }
                 else{
                     cell.textLabel?.text = "See All Tasks"
                     cell.textLabel?.textAlignment = NSTextAlignment.Center
+                    cell.textLabel?.font = UIFont.boldSystemFontOfSize(16)
                 }
             }
         }
@@ -241,22 +295,22 @@ class MasterViewController: UITableViewController, UISearchBarDelegate, UISearch
     }
     
     func filterContentForSearchText(searchText: String) {
-        filteredUpdates = self.updates.filter({(String) -> Bool in
-            let stringMatch = String.lowercaseString.rangeOfString(searchText.lowercaseString)
+        filteredUpdates = self.updates.filter({(current) -> Bool in
+            let stringMatch = current.description.lowercaseString.rangeOfString(searchText.lowercaseString)
             return (stringMatch != nil)
         })
         
-        filteredProjects = self.projects.filter({(String) -> Bool in
-let stringMatch = String.lowercaseString.rangeOfString(searchText.lowercaseString)
+        filteredProjects = self.projects.filter({(current) -> Bool in
+let stringMatch = current.name.lowercaseString.rangeOfString(searchText.lowercaseString)
             return (stringMatch != nil)
         })
         
-        filteredTasks = self.tasks.filter({(String) -> Bool in
-            let stringMatch = String.lowercaseString.rangeOfString(searchText.lowercaseString)
+        filteredTasks = self.tasks.filter({(current) -> Bool in
+            let stringMatch = current.name.lowercaseString.rangeOfString(searchText.lowercaseString)
             return (stringMatch != nil)
         })
         
-        filteredResults = filteredUpdates + filteredProjects + filteredTasks
+//        filteredResults = filteredUpdates + filteredProjects + filteredTasks
     }
     
     func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
@@ -267,6 +321,13 @@ let stringMatch = String.lowercaseString.rangeOfString(searchText.lowercaseStrin
     func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
         self.filterContentForSearchText(self.searchDisplayController!.searchBar.text)
         return true
+    }
+    
+    func getDateFromString(input:String) -> NSDate{
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd 'at' HH:mm a"
+        let date = dateFormatter.dateFromString(input)
+        return date!
     }
     
     

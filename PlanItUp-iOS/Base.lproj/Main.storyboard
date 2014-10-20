@@ -36,7 +36,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="LSP-TF-ess" style="IBUITableViewCellStyleDefault" id="SuN-Kf-nan">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="LSP-TF-ess" style="IBUITableViewCellStyleDefault" id="SuN-Kf-nan">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SuN-Kf-nan" id="MAd-RV-0nY">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -60,6 +60,9 @@
                     <navigationItem key="navigationItem" title="Dashboard" id="tQt-TN-PWz"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="i1n-FC-cBj" id="Atq-LG-Ycw"/>
+                        <segue destination="Ah7-4n-0Wa" kind="show" identifier="showUpdate" id="o7h-Es-ksA"/>
+                        <segue destination="E4z-Tg-ya1" kind="show" identifier="showProject" id="3xG-Nf-hpD"/>
+                        <segue destination="cm4-c9-cMc" kind="show" identifier="showTask" id="fnp-Qo-5dE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
@@ -75,10 +78,28 @@
             </objects>
             <point key="canvasLocation" x="605" y="63.999999999999993"/>
         </scene>
-        <!--Detail-->
+        <!--Task Details-->
+        <scene sceneID="eun-v8-367">
+            <objects>
+                <viewController title="Task Details" id="cm4-c9-cMc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OZP-5d-Ced"/>
+                        <viewControllerLayoutGuide type="bottom" id="72d-Rh-nbe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rzl-Q5-cK8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wfw-dA-9CQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1448" y="64"/>
+        </scene>
+        <!--Update Details-->
         <scene sceneID="Cn3-H9-jdl">
             <objects>
-                <viewController title="Detail" id="Ah7-4n-0Wa" customClass="DetailViewController" customModule="PlanItUp_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Update Details" id="Ah7-4n-0Wa" customClass="UpdateDetailViewController" customModule="PlanItUp_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cIm-e0-J51"/>
                         <viewControllerLayoutGuide type="bottom" id="a0L-h9-sNL"/>
@@ -102,14 +123,29 @@
                             <constraint firstAttribute="trailing" secondItem="Lei-5M-9Gs" secondAttribute="trailing" constant="20" symbolic="YES" id="pXB-RP-Zz6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Detail" id="cra-N8-TIN"/>
-                    <connections>
-                        <outlet property="detailDescriptionLabel" destination="Lei-5M-9Gs" id="sCT-F7-F6f"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="Update Details" id="cra-N8-TIN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1343" y="63.999999999999993"/>
+            <point key="canvasLocation" x="605" y="-598"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1xd-UK-Qub">
+            <objects>
+                <viewController id="E4z-Tg-ya1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dMB-Q0-0Sg"/>
+                        <viewControllerLayoutGuide type="bottom" id="xNV-Ot-Msh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4CA-34-Zrh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ycl-K3-8V2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1268" y="-598"/>
         </scene>
     </scenes>
 </document>

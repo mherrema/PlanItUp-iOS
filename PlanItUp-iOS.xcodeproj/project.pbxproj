@@ -14,6 +14,15 @@
 		168CFBCC19F2B10E00B3C5F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 168CFBCB19F2B10E00B3C5F6 /* Images.xcassets */; };
 		168CFBCF19F2B10E00B3C5F6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 168CFBCD19F2B10E00B3C5F6 /* LaunchScreen.xib */; };
 		168CFBDB19F2B10E00B3C5F6 /* PlanItUp_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168CFBDA19F2B10E00B3C5F6 /* PlanItUp_iOSTests.swift */; };
+		16BA980E19F3058D0015463B /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BA980D19F3058D0015463B /* Project.swift */; };
+		16BA981119F3066A0015463B /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BA981019F3066A0015463B /* Update.swift */; };
+		16BA981319F3072B0015463B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BA981219F3072B0015463B /* Task.swift */; };
+		16BA981519F307DE0015463B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BA981419F307DE0015463B /* Message.swift */; };
+		16BA981719F3083D0015463B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BA981619F3083D0015463B /* User.swift */; };
+		16BA981919F3090D0015463B /* Availability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BA981819F3090D0015463B /* Availability.swift */; };
+		16BA981B19F3099F0015463B /* Discussion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BA981A19F3099F0015463B /* Discussion.swift */; };
+		16BA981D19F309FC0015463B /* DiscussionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BA981C19F309FC0015463B /* DiscussionItem.swift */; };
+		16BA981F19F470260015463B /* UpdateDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BA981E19F470260015463B /* UpdateDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +47,15 @@
 		168CFBD419F2B10E00B3C5F6 /* PlanItUp-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PlanItUp-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		168CFBD919F2B10E00B3C5F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		168CFBDA19F2B10E00B3C5F6 /* PlanItUp_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanItUp_iOSTests.swift; sourceTree = "<group>"; };
+		16BA980D19F3058D0015463B /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		16BA981019F3066A0015463B /* Update.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Update.swift; sourceTree = "<group>"; };
+		16BA981219F3072B0015463B /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		16BA981419F307DE0015463B /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		16BA981619F3083D0015463B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		16BA981819F3090D0015463B /* Availability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Availability.swift; sourceTree = "<group>"; };
+		16BA981A19F3099F0015463B /* Discussion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Discussion.swift; sourceTree = "<group>"; };
+		16BA981C19F309FC0015463B /* DiscussionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscussionItem.swift; sourceTree = "<group>"; };
+		16BA981E19F470260015463B /* UpdateDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +100,10 @@
 				168CFBC219F2B10E00B3C5F6 /* AppDelegate.swift */,
 				168CFBC419F2B10E00B3C5F6 /* MasterViewController.swift */,
 				168CFBC619F2B10E00B3C5F6 /* DetailViewController.swift */,
+				16BA981E19F470260015463B /* UpdateDetailViewController.swift */,
 				168CFBC819F2B10E00B3C5F6 /* Main.storyboard */,
 				168CFBCB19F2B10E00B3C5F6 /* Images.xcassets */,
+				16BA980F19F3064D0015463B /* Models */,
 				168CFBCD19F2B10E00B3C5F6 /* LaunchScreen.xib */,
 				168CFBC019F2B10E00B3C5F6 /* Supporting Files */,
 			);
@@ -113,6 +133,21 @@
 				168CFBD919F2B10E00B3C5F6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		16BA980F19F3064D0015463B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				16BA981819F3090D0015463B /* Availability.swift */,
+				16BA981A19F3099F0015463B /* Discussion.swift */,
+				16BA981C19F309FC0015463B /* DiscussionItem.swift */,
+				16BA981419F307DE0015463B /* Message.swift */,
+				16BA980D19F3058D0015463B /* Project.swift */,
+				16BA981219F3072B0015463B /* Task.swift */,
+				16BA981019F3066A0015463B /* Update.swift */,
+				16BA981619F3083D0015463B /* User.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,9 +250,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16BA981D19F309FC0015463B /* DiscussionItem.swift in Sources */,
 				168CFBC719F2B10E00B3C5F6 /* DetailViewController.swift in Sources */,
+				16BA981B19F3099F0015463B /* Discussion.swift in Sources */,
+				16BA981F19F470260015463B /* UpdateDetailViewController.swift in Sources */,
 				168CFBC519F2B10E00B3C5F6 /* MasterViewController.swift in Sources */,
+				16BA981119F3066A0015463B /* Update.swift in Sources */,
+				16BA981919F3090D0015463B /* Availability.swift in Sources */,
 				168CFBC319F2B10E00B3C5F6 /* AppDelegate.swift in Sources */,
+				16BA981719F3083D0015463B /* User.swift in Sources */,
+				16BA981319F3072B0015463B /* Task.swift in Sources */,
+				16BA980E19F3058D0015463B /* Project.swift in Sources */,
+				16BA981519F307DE0015463B /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +453,7 @@
 				168CFBE019F2B10E00B3C5F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		168CFBE119F2B10E00B3C5F6 /* Build configuration list for PBXNativeTarget "PlanItUp-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +462,7 @@
 				168CFBE319F2B10E00B3C5F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
